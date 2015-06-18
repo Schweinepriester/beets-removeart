@@ -9,4 +9,5 @@ class RemoveArtFile(BeetsPlugin):
     def removeartfile(library, album):
         # self._log.info(u'Going to delete {0.artpath}', album) # TODO
         # print album.artpath # TODO
-        os.remove(album.artpath)
+        if album.artpath is not None:
+            os.remove(album.artpath)
