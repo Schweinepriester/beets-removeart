@@ -10,4 +10,5 @@ class RemoveArtFile(BeetsPlugin):
         # self._log.info(u'Going to delete {0.artpath}', album) # TODO
         # print album.artpath # TODO
         if album.artpath is not None:
-            os.remove(album.artpath)
+            # print type(unicode(album.artpath, "utf-8"))
+            os.remove(unicode(album.artpath, "utf-8"))
